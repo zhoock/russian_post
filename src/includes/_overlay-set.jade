@@ -1,0 +1,191 @@
+//- overlay-set.jade
+
+// overlay
+i.icon-region_pop_close.js-modal__close
+.b-modal-overlay.js-modal-overlay.open
+	.b-modal.b-modal--set.b-modal-effect-1
+
+		// modal-content
+		section.b-modal-content.b-subscription
+
+			.row.small-collapse
+				.small-12.columns
+					.b-subscription__heading.b-subscription__heading--set.b-subscription--shadow.text-center
+						img.b-subscription__photo(src="/src/images/selection-book1.jpg")
+						img.b-subscription__photo(src="/src/images/selection-book2.jpg")
+						img.b-subscription__photo(src="/src/images/selection-book3.jpg")
+						.b-subscription__type
+							//i.icon-book
+							| Комплект
+			.b-subscription__journal.b-subscription__journal--show
+				.row
+					.small-11.small-centered.columns
+						h1
+							i.icon-Dropdown
+							| Практическое налоговое планирование
+						p.b-subscription__description Национальный познавательный ежемесячный журнал. Издается с 1861 года. Содержит полный электронный архив всех выпусков до 1970 года.
+						p.b-subscription__info 148–164 страницы, 330–410 г. Выходит 6 раз в полгода
+
+			.b-subscription__journal
+				.row
+					.small-11.small-centered.columns
+						h1
+							i.icon-Dropdown
+							| Финансовый директор
+						p.b-subscription__description Национальный познавательный ежемесячный журнал. Издается с 1861 года. Содержит полный электронный архив всех выпусков до 1970 года.
+						p.b-subscription__info 148–164 страницы, 330–410 г. Выходит 6 раз в полгода
+
+			.b-subscription__journal
+				.row
+					.small-11.small-centered.columns
+						h1
+							i.icon-Dropdown
+							| Кадровое дело
+						p.b-subscription__description Национальный познавательный ежемесячный журнал. Издается с 1861 года. Содержит полный электронный архив всех выпусков до 1970 года.
+						p.b-subscription__info 148–164 страницы, 330–410 г. Выходит 6 раз в полгода
+
+
+			.b-subscription__periods
+				.row
+					.small-11.small-centered.columns
+						.b-subscription__periods__item
+							div: strong Минимальная подписка — полгода
+
+							.b-subscription__periods__titles
+								div: span Практическое налоговое планирование
+								div: span Финансовый директор
+								div: span Кадровое дело
+
+							.b-subscription__periods__titles__quantity
+								div 6 выпусков
+								div 3 выпуска
+								div 3 выпуска
+
+							.b-subscription__periods__price 1427,03 &#8381
+
+						.b-subscription__periods__item
+							div: strong Годовая подписка
+
+							.b-subscription__periods__titles
+								div: span Практическое налоговое планирование
+								div: span Финансовый директор
+								div: span Кадровое дело
+
+							.b-subscription__periods__titles__quantity
+								div 12 выпусков
+								div 6 выпусков
+								div 6 выпусков
+
+							.b-subscription__periods__price 1427,03 &#8381
+
+			.b-card
+				form
+					.row
+						.small-11.columns.small-centered
+							label(for="name") Период подписки
+							.b-subscription-period
+								.b-choose-periods
+									.wrapper-periods
+										.b-choose-periods__period 2015: Июл Авг
+										.b-choose-periods__period 2016: Янв Фев Мар Апр Май Июн
+								.b-dropdown
+									.b-wrapper-years
+										.b-wrapper-years__year 2015
+										each val in firstHalf
+											.b-wrapper-years__month= val
+										.b-wrapper-years__half
+											each val in secondHalf
+												.b-wrapper-years__month= val
+									.b-wrapper-years
+										.b-wrapper-year 2016
+										each val in firstHalf
+											.b-wrapper-years__month.b-wrapper-years__month--not-active= val
+
+										each val in twoMonth
+											.b-wrapper-years__twoMonth
+												.b-wrapper-years__month= val
+							label(for="name") Доставка
+							.b-custom-select
+								.b-custom-select__value Домой
+								input(readonly="readonly", value="Домой", type="text")
+								i.icon-Dropdown2
+								.b-custom-select__suggest-wrapper
+									.b-custom-select__suggest
+										.b-custom-select__suggest__element.b-custom-select__suggest__element--selected До адресата
+										.b-custom-select__suggest__element До адресата
+										.b-custom-select__suggest__element До адресата
+										.b-custom-select__suggest__element До адресата
+							label(for="address") Адрес (населённый пункт, улица, дом, квартира)
+							.b-custom-address
+								input#address(type="text", placeholder="Москва, Маросейка 3/16")
+							label(for="fio") ФИО получателя
+							.b-custom-input
+								input#fio(type="text", placeholder="Супрунов Константин Николаевич")
+							.text-center
+								a.btn.btn__primary.btn--cart.btn--expand
+									i.icon-shoppingcart
+									| В корзину
+									span.price 932,18 &#8381;
+								//div
+								//	input#checked(type="checkbox", checked)
+								//	label(for="checked") Юридическое лицо
+
+			// buy with
+			section.b-recently-viewed.b-recently-viewed--buy-with.b-recently-viewed--grey
+				.row
+					.small-11.small-centered.columns
+						h2 Похожие издания
+				.row
+					.small-11.small-centered.columns
+						.row
+							.small-3.columns
+								- var popup = true
+								+block-recently-viewed
+							.small-3.columns
+								+block-recently-viewed
+							.small-3.columns
+								+block-recently-viewed
+							.small-3.columns
+								+block-recently-viewed
+			// /buy with
+
+
+		section.b-modal-content.b-subscription
+			.small-12.columns
+
+				// aside
+				aside.b-included.b-included--popup
+					h1 Издания из&nbsp;комплекта
+
+					.b-block-magazine
+						a(href="#")
+							figure
+								img(src="/src/images/selection-book3.jpg")
+								figcaption Кадровое дело
+								span.b-price__book
+									//i.icon-book
+									| от 1220 &#8381;
+
+					.b-block-magazine
+						a(href="#")
+							figure
+								img(src="/src/images/selection-book2.jpg")
+								figcaption Финансовый директор
+								span.b-price__book
+									//i.icon-book
+									| от 1220 &#8381;
+
+					.b-block-magazine
+						a(href="#")
+							figure
+								img(src="/src/images/selection-book1.jpg")
+								figcaption Практическое налоговое планирование
+								span.b-price__book
+									//i.icon-book
+									| от 1220 &#8381;
+				// /aside
+
+		// /modal-content
+// /overlay
+
+

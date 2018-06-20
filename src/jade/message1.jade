@@ -1,0 +1,34 @@
+//- message1.jade
+
+include ../includes/_mixins
+
+doctype html
+html(lang="ru")
+	- var title = "Почта России – подписка оформлена"
+
+	include ../includes/_head
+
+	body
+		img(src="/src/images/Subs_message_9_1.jpg" alt="" style="left: 210px; opacity: 0.5; position: absolute; top: 0; z-index: 9999; display: none;")
+
+		// overlay
+		.b-modal-overlay.js-modal-overlay.open
+			.b-modal.b-modal-effect-1
+
+				// modal-content
+				section.b-modal-content.b-message
+					i.icon-region_pop_close.js-modal__close
+					.row.small-collapse
+						.small-12.columns
+							.b-message__status.b-message__status--success
+								i.icon-Checkbox
+								| Подписка оформлена
+							.b-message__notice Ждите почтальона
+					.b-message__action Перейти в
+						=" "
+						a(href="#") Мои подписки
+				// /modal-content
+
+		// /overlay
+
+

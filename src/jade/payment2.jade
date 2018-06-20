@@ -1,0 +1,50 @@
+//-  payments.jade
+
+include ../includes/_mixins
+
+doctype html
+html(lang="ru")
+	- var title = "Почта России – оплата2"
+
+	include ../includes/_head
+
+	body
+
+		// content
+		section.b-content(role="main")
+			.row
+				.small-12.columns
+					.b-card-payment
+						h1 Связь банк
+						form
+							.b-card-payment__details.b-card-payment__details--saccess
+								.row
+									.small-5.column
+										.b-card-payment__details__number Номер карты
+										.b-card-payment__details__name Имя на карте
+										.b-card-payment__details__transaction-number Номер транзакции
+
+									.small-6.column.end
+										.b-card-payment__details__number **5050
+										.b-card-payment__details__name IVAN VOTYAKOV
+										.b-card-payment__details__transaction-number 63745673218
+							.b-card-payment__amount.text-center
+								img.logo(src="/src/images/logo.svg", alt="Логотип Почты России", title="Логотип Почты России", width="100", height="50")
+								h2.success
+									i.icon-Checkbox
+									| Оплата на cумму 647 рублей
+									br
+									| прошла успешно
+								p.b-card-payment__amount__order-number Номер заказа: 1471
+								a.btn.btn__primary.btn--expand Вернуться на сайт
+						.b-payment-systems
+							ul.left
+								li: img(src="/src/images/visa.svg")
+								li: img(src="/src/images/visaelectron.svg")
+								li: img(src="/src/images/masterCard.svg")
+								li: img(src="/src/images/maestro.svg")
+							ul.right
+								li: img(src="/src/images/pci.png")
+								li: img(src="/src/images/vermedByVisa.svg")
+								li: img(src="/src/images/masterCardSecureCode.svg")
+		// /content

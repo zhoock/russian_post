@@ -1,0 +1,144 @@
+//- overlay.jade
+
+// overlay
+i.icon-region_pop_close.js-modal__close
+
+.b-modal-overlay.js-modal-overlay.open
+	.b-modal.b-modal-effect-1
+
+		// modal-content
+		section.b-modal-content.b-subscription
+			.row.small-collapse
+				.small-12.columns
+					.b-subscription__heading.b-subscription--shadow.text-center
+						img.b-subscription__photo(src="/src/images/photo-magazine5.jpg")
+
+						.b-subscription__type
+							//i.icon-book
+							| Журнал
+
+			.row
+				.small-10.small-centered.columns
+
+					h1 Деревянные дома
+					p.b-subscription__description Национальный познавательный ежемесячный журнал. Издается с 1861 года. Содержит полный электронный архив всех выпусков до 1970 года.
+					p.b-subscription__info 148–164 страницы, 330–410 г. Выходит 1 раз в полгода
+						br
+						| Электронная версия:
+						=" "
+						a(href="#") wood.ru
+
+			.row
+				.small-10.small-centered.columns
+					.b-subscription__period
+						div Минимальная
+						div подписка в 2015
+						div 2 месяца, 1 выпуск
+						.b-subscription__price 147,03 ₽
+
+					.b-subscription__period
+						div Минимальная
+						div подписка в 2016
+						div 2 месяца, 1 выпуск
+						.b-subscription__price 167,03 ₽
+
+					.b-subscription__period
+						div Полгода,
+						div 3 выпуска
+						.discount скидка 30%
+						.b-subscription__price 400,39 ₽
+
+					.b-subscription__period
+						div1 год,
+						div 6 выпусков
+						.discount скидка 40%
+						.b-subscription__price 1250 ₽
+
+			.b-card
+				form
+
+					.row
+						.small-11.columns.small-centered
+
+							label(for="name") Период подписки
+							.b-subscription-period
+								.b-choose-periods
+									.wrapper-periods
+										.b-choose-periods__period 2015: Июл Авг
+										.b-choose-periods__period 2016: Янв Фев Мар Апр Май Июн
+
+								.b-dropdown
+									.b-wrapper-years
+										.b-wrapper-years__year 2015
+										each val in firstHalf
+											.b-wrapper-years__month= val
+
+										.b-wrapper-years__half
+											each val in secondHalf
+												.b-wrapper-years__month= val
+
+									.b-wrapper-years
+										.b-wrapper-year 2016
+										each val in firstHalf
+											.b-wrapper-years__month.b-wrapper-years__month--not-active= val
+
+
+										each val in twoMonth
+											.b-wrapper-years__twoMonth
+												.b-wrapper-years__month= val
+
+							label(for="name") Доставка
+							.b-custom-select
+								.b-custom-select__value Домой
+								input(readonly="readonly", value="Домой", type="text")
+								i.icon-Dropdown2
+								.b-custom-select__suggest-wrapper
+									.b-custom-select__suggest
+										.b-custom-select__suggest__element.b-custom-select__suggest__element--selected До адресата
+										.b-custom-select__suggest__element До адресата
+										.b-custom-select__suggest__element До адресата
+										.b-custom-select__suggest__element До адресата
+
+							label(for="address") Адрес (населённый пункт, улица, дом, квартира)
+							.b-custom-address
+								input#address(type="text", placeholder="Москва, Маросейка 3/16")
+
+							label(for="fio") ФИО получателя
+							.b-custom-input
+								input#fio(type="text", placeholder="Супрунов Константин Николаевич")
+
+							.text-center
+								a.btn.btn__primary.btn--cart.btn--expand
+									i.icon-shoppingcart
+									| В корзину
+									span.price 932,18 &#8381;
+
+
+								//div
+								//	input#checked(type="checkbox", checked)
+								//	label(for="checked") Юридическое лицо
+
+			// buy with
+			section.b-recently-viewed.b-recently-viewed--buy-with.b-recently-viewed--grey
+				.row
+					.small-11.small-centered.columns
+						h2 Похожие издания
+
+				.row
+					.small-11.small-centered.columns
+						.row
+							.small-3.columns
+								- var popup = true
+								+block-recently-viewed
+							.small-3.columns
+								+block-recently-viewed
+							.small-3.columns
+								+block-recently-viewed
+							.small-3.columns
+								+block-recently-viewed
+			// /buy with
+
+		// /modal-content
+
+// /overlay
+

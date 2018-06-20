@@ -1,0 +1,25 @@
+//- includes/_footer
+
+footer(role="contentinfo")
+
+	.row
+		.small-6.columns
+			p.copy 2015 &copy; ФГУП Почта России
+
+		.small-2.columns
+			ul.social
+				li
+					a(href="#"): i.icon-vk-icon
+				li
+					a(href="#"): i.icon-facebook-icon
+				li
+					a(href="#"): i.icon-twitter-icon
+
+		.small-4.columns
+			nav
+				ul.menu
+					each val in ["Для бизнеса", "Пресс центр", "О компании"]
+						li: a(href="#")= val
+
+
+

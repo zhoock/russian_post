@@ -1,0 +1,43 @@
+//- my-subscription-none.jade
+
+include ../includes/_mixins
+
+doctype html
+html(lang="ru")
+	- var title = "Почта России – нет подписок"
+
+	include ../includes/_head
+
+	body
+		img(src="/src/images/Subs_mysubs_none.jpg" alt="" style="left: 210px; opacity: 0.5; position: absolute; top: 0; z-index: 9999; display: none;")
+
+		include ../includes/_header
+
+		// content
+		section.b-content(role="main")
+
+			// nav
+			nav.b-nav.b-nav--cart
+				.row
+					.small-12.columns
+						ul
+							li
+								i.icon-back
+								a(href="#") В каталог изданий
+			// /nav
+
+			h1.personal-area Мои подписки
+			.row
+				.small-12.columns
+					section.b-my-subscription--none.text-center
+						img(src="/src/images/no-cover.svg")
+						h2 Здесь появятся ваши подписки
+						.btn.btn__primary.btn--expand Перейти в каталог изданий
+
+
+		// /content
+
+		// footer
+		include ../includes/_footer
+		// /footer
+

@@ -1,0 +1,231 @@
+//- publication-popup.jade
+
+include ../includes/_mixins
+
+doctype html
+html(lang="ru")
+	- var title = "Почта России – издание комплекты попап"
+
+	include ../includes/_head
+
+	body.without-scrolling
+		include ../includes/_header
+		include ../includes/_overlay-publication-set
+		include ../includes/_search
+
+		// content
+		section.b-content(role="main")
+			section.b-new-popular-magazines
+				.row
+					.small-10.columns
+						h2 Новые и популярные журналы
+					.small-2.columns
+						.text-right
+							a.more
+								| Ещё 35
+							i.icon-More
+				.row
+					.small-9.columns
+						.row
+							.small-4.columns
+								+block-magazine
+							.small-4.columns
+								+block-magazine
+							.small-4.columns
+								+block-magazine
+						.row
+							.small-4.columns
+								+block-magazine
+							.small-4.columns
+								+block-magazine
+							.small-4.columns
+								+block-magazine
+					.small-3.columns
+						.b-publishing-house
+							a(href="#")
+								p.b-publishing-house__heading.b-publishing-house__heading--tt издательство
+								img.logo(src="/src/images/publishing-house1.png")
+								.b-publishing-house__logs
+									img(src="/src/images/photo-magazine1.jpg")
+									img(src="/src/images/photo-magazine1.jpg")
+									img(src="/src/images/photo-magazine1.jpg")
+								p.b-publishing-house__title Аргументы и факты
+								.b-publishing-house__show
+									i.icon-show
+									span Показать
+			// /new-popular-magazines
+
+			// selection
+			.row
+				.small-12.columns
+					section.b-selection
+						a(href="#")
+							.row
+								.small-7.columns
+									img(src="/src/images/selection-book1.jpg")
+									img(src="/src/images/selection-book2.jpg")
+									img(src="/src/images/selection-book3.jpg")
+								.small-5.columns
+									p.b-selection__choice комплект
+									h3.b-selection__heading Авторитетные российские журналы по&nbsp;налогообложению и&nbsp;бухгалтерскому учету
+									p.b-selection__tagline Все, что нужно бухгалтеру в&nbsp;практической работе. Примеры, образцы и&nbsp;готовые решения, как поступать в&nbsp;неоднозначных ситуациях.
+									.btn.btn__primary.btn--cart
+										i.icon-shoppingcart
+										| В корзину
+			// /selection
+
+			// press city
+			section.b-press-city
+				.row
+					.small-10.columns
+						h2 Пресса Самары
+					.small-2.columns
+						.text-right
+							a.more
+								| Ещё 5
+							i.icon-More
+				.row
+					.small-6.columns
+						- var bigRed = true
+						+block-magazine()(class="b-block-magazine--red b-block-magazine--big")
+					.small-3.columns
+						- var bigRed = false
+						- var newspaper = true
+						+block-magazine
+					.small-3.columns
+						- var newspaper = true
+						+block-magazine
+			// /press city
+
+			// seems
+			section.b-seems
+				.row
+					.small-10.columns
+						h2 Похоже на то, что вы выписываете
+					.small-2.columns
+						.text-right
+							a.more
+								| Ещё 10
+							i.icon-More
+				.row
+					.small-3.columns
+						- var newspaper = false
+						+block-magazine
+					.small-3.columns
+						+block-magazine
+					.small-6.columns
+						- var bigWhite = true
+						+block-magazine()(class="b-block-magazine--big")
+			// /seems
+
+			// newspaper
+			section.b-newspaper
+				.row
+					.small-12.columns
+						h2 Газеты
+				.row
+					.small-3.columns
+						- var bigWhite = false
+						- var newspaper = true
+						+block-magazine
+					.small-3.columns
+						- var newspaper = false
+						- var magazinePlaceholder = true
+						+block-magazine
+					.small-3.columns
+						- var magazinePlaceholder = false
+						- var publishingHouse = true
+						+block-magazine
+					.small-3.columns
+						- var publishingHouse = false
+						- var newspaperPlaceholder = true
+						+block-magazine
+			// /newspaper
+
+			// recently viewed
+			section.b-recently-viewed
+				.row
+					.small-10.columns
+						h2 Вы недавно смотрели
+					.small-2.columns
+						.text-right
+							a.more
+								| Ещё 35
+							i.icon-More
+				.row
+					.small-2.columns
+						+block-recently-viewed
+					.small-2.columns
+						+block-recently-viewed
+					.small-2.columns
+						+block-recently-viewed
+					.small-2.columns
+						+block-recently-viewed
+					.small-2.columns
+						+block-recently-viewed
+					.small-2.columns
+						+block-recently-viewed
+			// /recently viewed
+
+			// cart
+			section.b-cart
+				.row
+					.small-2.columns
+						+block-cart
+					.small-2.columns
+						+block-cart
+					.small-2.columns
+						+block-cart
+					.small-2.columns
+						+block-cart
+					.small-2.columns
+						+block-cart
+					.small-2.columns
+						+block-cart
+				.b-cart__submit
+					p 7 изданий на 9670 &#8381;
+					a.btn.btn__primary Оформить
+			// /cart
+
+		section.b-modal-content.b-subscription
+			.small-12.columns
+
+				// aside
+				aside.b-included.b-included--popup
+					h1 Издания из&nbsp;комплекта
+
+					.b-block-magazine
+						a(href="#")
+							figure
+								img(src="/src/images/selection-book3.jpg")
+								figcaption Кадровое дело
+								span.b-price__book
+									//i.icon-book
+									| от 1220 &#8381;
+
+					.b-block-magazine
+						a(href="#")
+							figure
+								img(src="/src/images/selection-book2.jpg")
+								figcaption Финансовый директор
+								span.b-price__book
+									//i.icon-book
+									| от 1220 &#8381;
+
+					.b-block-magazine
+						a(href="#")
+							figure
+								img(src="/src/images/selection-book1.jpg")
+								figcaption Практическое налоговое планирование
+								span.b-price__book
+									//i.icon-book
+									| от 1220 &#8381;
+				// /aside
+
+
+
+		// /content
+
+		// footer
+		include ../includes/_footer
+		// /footer

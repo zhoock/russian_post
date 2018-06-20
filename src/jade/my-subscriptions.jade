@@ -1,0 +1,57 @@
+//- my-subscription.jade
+
+include ../includes/_mixins
+
+doctype html
+html(lang="ru")
+	- var title = "Почта России – мои подписки"
+
+	include ../includes/_head
+
+	body
+		img(src="/src/images/Subs_mysubs.jpg" alt="" style="left: 210px; opacity: 0.5; position: absolute; top: 0; z-index: 9999; display: none;")
+		include ../includes/_header
+
+		// content
+		section.b-content(role="main")
+
+			// nav
+			nav.b-nav.b-nav--cart
+				.row
+					.small-12.columns
+						ul
+							li
+								i.icon-back
+								a(href="#") В каталог изданий
+
+			// /nav
+
+			h1.personal-area Мои подписки
+
+			.row
+				.small-12.columns
+					section.b-results.b-my-subscription
+						article.b-my-subscription__item
+							h2 Истекшие
+							- var renew = true
+							- var setImg = true
+							+mySubscriptiontsItem("Комплект", "Финансовый директор + Практическое налоговое планирование + Кадровое дело", 'Россия, Рязань, улица Павлова, 31', "Вотякову Ивану Александровичу", 'Подписка активна до октября 2015', "Последние номера принесли 5 октября 2015", "Возобновить подписку").b-block-magazine__renew
+						article.b-my-subscription__item
+							h2 Активные
+							- var renew = true
+							- var setImg = true
+							+mySubscriptiontsItem("Комплект", "Финансовый директор + Практическое налоговое планирование + Кадровое дело", 'Россия, Рязань, улица Павлова, 31', "Вотякову Ивану Александровичу", 'Подписка активна до октября 2015', "Последние номера принесут завтра", "Продлить подписку").b-block-magazine__extend
+						article.b-my-subscription__item
+							- var renew = false
+							- var setImg = false
+							+mySubscriptiontsItem("Журнал", "Финансовый директор + Практическое налоговое планирование + Кадровое дело", 'Россия, Рязань, улица Павлова, 31', "Вотякову Ивану Александровичу", 'Подписка активна до октября 2015', "Раз в месяц, 8 числа", "Продлить подписку")
+						article.b-my-subscription__item
+							+mySubscriptiontsItem("Журнал", "Финансовый директор + Практическое налоговое планирование + Кадровое дело", 'Россия, Рязань, улица Павлова, 31', "Вотякову Ивану Александровичу", 'Подписка активна до октября 2015', "Ежедневно", "Продлить подписку")
+						article.b-my-subscription__item
+							+mySubscriptiontsItem("Журнал", "Финансовый директор + Практическое налоговое планирование + Кадровое дело", 'Россия, Рязань, улица Павлова, 31', "Вотякову Ивану Александровичу", 'Подписка активна до октября 2015', "Два раза в неделю, во вторник и четверг", "Продлить подписку")
+
+		// /content
+
+		// footer
+		include ../includes/_footer
+		// /footer

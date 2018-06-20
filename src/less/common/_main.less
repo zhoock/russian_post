@@ -1,0 +1,346 @@
+// main
+//
+//
+
+* {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    .box-sizing(border-box);
+}
+
+html,
+body {
+    height: 100%;
+}
+
+html, body {
+    font-size: 62.5%
+}
+
+html,
+button,
+input,
+select,
+textarea {
+    color: @base-text;
+    font-family: @base-font-family;
+}
+
+body {
+    font-size: @base-font-size;
+    line-height: @base-line-height;
+    font-family: @base-font-family;
+    background: @body-bg;
+
+    h1, h2, h3, h5, h6 {
+        font-weight: @header-font-weight;
+        color: @dark-text;
+    }
+
+    p {
+        margin-bottom: 1.33333rem;
+
+        &.before-list {
+            margin: 0;
+        }
+    }
+
+    ul {
+        list-style: none;
+        margin-bottom: 1.33333rem;
+
+        &.dash li:before {
+            content: "&mdash;";
+        }
+    }
+
+    a {
+        cursor: pointer;
+    }
+
+    a:link,
+    a:visited {
+        text-decoration: none;
+        color: @link;
+        outline: none;
+        .transition(color 0.25s);
+    }
+
+    a:hover,
+    a:active {
+        text-decoration: underline;
+    }
+
+    a.dashed:link,
+    a.dashed:visited {
+        color: @link;
+        border-bottom: 1px dashed @link;
+    }
+
+    a.dashed:hover,
+    a.dashed:active {
+        color: @link-hover;
+        border-bottom: 1px dashed @link-hover;
+    }
+
+    img, embed, object, video {
+        max-width: 100%;
+        border: none;
+    }
+
+    img {
+        -ms-interpolation-mode: bicubic;
+    }
+}
+
+/*
+ * Remove text-shadow in selection highlight: h5bp.om/i
+ * These selection declarations have to be separate.
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+/*
+ * Remove the gap between images, videos, audio and canvas and the bottom of
+ * their containers: h5bp.com/i/440
+ */
+
+audio,
+canvas,
+img,
+video {
+    vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+    resize: vertical;
+}
+
+/* ==========================================================================
+   Browse Happy prompt
+   ========================================================================== */
+
+.browsehappy {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+// b-header
+@import "../blocks/b-header/_style";
+
+// b-search
+@import "../blocks/b-search/_style";
+
+// b-nav
+@import "../blocks/b-nav/_style";
+
+// b-content
+@import "../blocks/b-content/_style";
+
+// b-magazine
+@import "../blocks/b-magazine/_style";
+
+// b-aside
+@import "../blocks/b-aside/_style";
+
+// b-selection
+@import "../blocks/b-selection/_style";
+
+// b-recently-viewed
+@import "../blocks/b-recently-viewed/_style";
+
+// b-cart
+@import "../blocks/b-cart/_style";
+
+// b-results
+@import "../blocks/b-results/_style";
+
+// b-banner-publisher
+@import "../blocks/b-banner-publisher/_style";
+
+// b-categories
+@import "../blocks/b-categories/_style";
+
+// b-categories
+@import "../blocks/b-payment/_style";
+
+// b-my-subscriptions-none
+@import "../blocks/b-my-subscriptions-none/_style";
+
+// UI
+@import "../UI/_inputs";
+@import "../UI/_buttons";
+@import "../UI/_checkbox-buttons";
+@import "../UI/_select";
+
+// b-popups
+@import "../blocks/b-popups/_style";
+
+// b-subscription
+@import "../blocks/b-subscription/_style";
+
+// b-messages
+@import "../blocks/b-messages/_style";
+
+// b-footer
+@import "../blocks/b-footer/_style";
+
+.hidden {
+    display: none !important;
+    visibility: hidden;
+}
+
+//@media print,
+//(-o-min-device-pixel-ratio: 5/4),
+//(-webkit-min-device-pixel-ratio: 1.25),
+//(min-resolution: 120dpi)
+/* Style adjustments for high resolution devices */
+
+input:focus {
+    &:-moz-placeholder {
+        color: transparent !important;
+    }
+    &::-moz-placeholder {
+        color: transparent !important;
+    }
+    &:-ms-input-placeholder {
+        color: transparent !important;
+    }
+    &::-webkit-input-placeholder {
+        color: transparent !important;
+    }
+}
+
+.scrollyeah {
+    position: relative;
+    overflow: hidden;
+    cursor: default;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    *zoom: 1;
+}
+
+.scrollyeah__wrap {
+    overflow: hidden;
+    *zoom: 1;
+}
+
+.scrollyeah__shaft {
+    float: left;
+}
+
+.scrollyeah__shaft, .scrollyeah__parallax {
+    left: 0;
+    position: relative;
+}
+
+.scrollyeah_active .scrollyeah__shaft {
+    cursor: move;
+    cursor: -webkit-grab;
+    cursor: -o-grab;
+    cursor: -ms-grab;
+    cursor: grab;
+    *cursor: move !important;
+}
+.scrollyeah_active .scrollyeah__shaft_grabbing, .scrollyeah_active .scrollyeah__shaft_grabbing * {
+    cursor: -webkit-grabbing;
+    cursor: -o-grabbing;
+    cursor: -ms-grabbing;
+    cursor: grabbing;
+}
+
+.scrollyeah__shadow {
+    display: block;
+    position: absolute;
+    text-decoration: none;
+    top: 0;
+    bottom: 0;
+    width: 10px;
+    height: auto;
+    -webkit-transition-property: left, right;
+    transition-property: left, right;
+    -webkit-transition-duration: 333ms, 333ms;
+    transition-duration: 333ms, 333ms;
+    -webkit-transition-timing-function: cubic-bezier(0.1, 0, 0.25, 1), cubic-bezier(0.1, 0, 0.25, 1);
+    transition-timing-function: cubic-bezier(0.1, 0, 0.25, 1), cubic-bezier(0.1, 0, 0.25, 1);
+    z-index: 10;
+    *display: none !important;
+    background-repeat: no-repeat;
+    background-size: 1px 100%, 5px 100%;
+}
+
+.scrollyeah__shadow_prev {
+    left: -10px;
+    background-image: -webkit-linear-gradient(transparent, rgba(0, 0, 0, 0.3) 25%, rgba(0, 0, 0, 0.3) 75%, transparent), -webkit-radial-gradient(0 50%, farthest-side, rgba(0, 0, 0, 0.5), transparent);
+    background-image: linear-gradient(transparent, rgba(0, 0, 0, 0.3) 25%, rgba(0, 0, 0, 0.3) 75%, transparent), radial-gradient(0 50%, farthest-side, rgba(0, 0, 0, 0.5), transparent);
+    background-position: 0 0, 0 0;
+}
+
+.scrollyeah__shadow_next {
+    right: -10px;
+    background-image: -webkit-linear-gradient(transparent, rgba(0, 0, 0, 0.3) 25%, rgba(0, 0, 0, 0.3) 75%, transparent), -webkit-radial-gradient(100% 50%, farthest-side, rgba(0, 0, 0, 0.5), transparent);
+    background-image: linear-gradient(transparent, rgba(0, 0, 0, 0.3) 25%, rgba(0, 0, 0, 0.3) 75%, transparent), radial-gradient(100% 50%, farthest-side, rgba(0, 0, 0, 0.5), transparent);
+    background-position: 100% 0, 100% 0;
+}
+
+.scrollyeah_shadow .scrollyeah__shadow_prev {
+    left: 0;
+}
+.scrollyeah_shadow .scrollyeah__shadow_next {
+    right: 0;
+}
+
+.scrollyeah_shadow_no-left .scrollyeah__shadow_prev {
+    left: -10px;
+}
+
+.scrollyeah_shadow_no-right .scrollyeah__shadow_next {
+    right: -10px;
+}
+
+

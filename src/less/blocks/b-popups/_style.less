@@ -1,0 +1,103 @@
+// Popups
+//
+//
+
+.without-scrolling {
+    overflow-y: hidden;
+}
+
+.b-modal-overlay {
+    position: fixed;
+    visibility: hidden;
+    padding: 13rem 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1000;
+    opacity: 0;
+    overflow-x: hidden;
+    overflow-y: auto;
+    background: rgba(0, 0, 0, 0.7);
+    -moz-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+
+    &.open {
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+.b-modal {
+    width: 700px;
+    margin: auto;
+    height: auto;
+    z-index: 2000;
+
+    &--set {
+        width: 940px;
+
+        .b-modal-content:nth-of-type(1) {
+            width: 700px;
+            float: left;
+            margin-right: 10px;
+        }
+
+        .b-modal-content:nth-of-type(2) {
+            width: 230px;
+            float: left;
+        }
+    }
+}
+.modal_closer {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+}
+
+/* Effect 1: Slide from the bottom */
+.b-modal-effect-1 .b-modal-content {
+    -moz-transform: translateY(20%);
+    -ms-transform: translateY(20%);
+    -webkit-transform: translateY(20%);
+    transform: translateY(20%);
+    opacity: 0;
+    -moz-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+.open .b-modal-effect-1 .b-modal-content {
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1;
+}
+
+/* Content styles */
+.b-modal-content {
+    background-color: white;
+}
+
+i.icon-region_pop_close {
+    display: block;
+    -moz-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+    position: fixed;
+    top: 60px;
+    right: 46px;
+    color: white;
+    font-size: 3.2rem;
+    z-index: 9999;
+    cursor: pointer;
+}
+
+

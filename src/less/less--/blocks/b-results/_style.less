@@ -1,0 +1,85 @@
+// Results
+//
+//
+
+.b-results {
+
+    .b-letters,
+    .b-cart__item,
+    .b-search-results__item,
+    .b-my-subscription__item {
+
+        .b-block-magazine {
+            position: relative;
+
+            a {
+                padding: 14px 30px 14px 26px;
+                height: inherit;
+                overflow: hidden;
+
+                &:hover {
+                    text-decoration: none;
+
+                    figcaption {
+                        text-decoration: underline;
+                    }
+                }
+
+                .b-block-magazine__logs--package {
+                    width: 212px;
+
+                    img {
+                        margin-right: -106px;
+                    }
+                }
+
+                .b-block-magazine__together {
+                    margin-bottom: 0;
+                }
+
+                .b-description {
+                    margin: 5px 0 20px 0;
+                }
+
+                .b-price {
+                    left: inherit;
+                    right: 0;
+                    bottom: 14px;
+                }
+            }
+        }
+
+        figcaption {
+            white-space: inherit;
+            overflow: inherit;
+        }
+
+        .b-price__book {
+            font-size: 2.2rem;
+        }
+    }
+
+    .b-cart__item {
+        figcaption {
+            margin-top: 14px;
+        }
+    }
+
+    .b-my-subscription__item {
+
+        a {
+            padding-bottom: 29px !important;
+
+            .b-description {
+                margin: 10px 0 10px 0 !important;
+            }
+
+            figcaption {
+                text-decoration: none !important;
+                color: @dark-text;
+                margin-top: 14px;
+            }
+        }
+    }
+}
+

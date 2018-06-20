@@ -1,0 +1,67 @@
+// Spinner
+//
+//
+
+@spCol: #0456a4;
+
+.sp {
+  .dot1,
+  .dot2,
+  .dot3 {
+    border-radius: 50%;
+    background-color: @spCol;
+    width: 18px;
+    height: 18px;
+    transform-origin: center center;
+    display: inline-block;
+    position: relative;
+    top: 0;
+  }
+
+  .dot1 {
+    left: -6px;
+    .animation(spScaleAlphaBefore, 1s, infinite, normal, linear);
+  }
+
+  .dot2 {
+
+    .animation(spScaleAlpha, 1s, infinite, normal, linear, .25s);
+  }
+
+  .dot3 {
+    left: 6px;
+    .animation(spScaleAlphaAfter, 1s, infinite, normal, linear, .5s);
+  }
+}
+
+.spScaleAlpha{
+  0% { opacity: .25; }
+  33% { opacity: 1; }
+  53% { opacity: .25; }
+  100% { opacity: .25; }
+}
+
+@-webkit-keyframes spScaleAlphaBefore {
+  .spScaleAlpha
+}
+
+@keyframes spScaleAlphaBefore {
+  .spScaleAlpha
+}
+
+@-webkit-keyframes spScaleAlpha {
+  .spScaleAlpha
+}
+
+@keyframes spScaleAlpha {
+  .spScaleAlpha
+}
+
+@-webkit-keyframes spScaleAlphaAfter {
+  .spScaleAlpha
+}
+
+@keyframes spScaleAlphaAfter {
+  .spScaleAlpha
+}
+

@@ -1,0 +1,40 @@
+//-  payments.jade
+
+include ../includes/_mixins
+
+doctype html
+html(lang="ru")
+	- var title = "Почта России – оплата3"
+
+	include ../includes/_head
+
+	body
+
+		// content
+		section.b-content(role="main")
+			.row
+				.small-12.columns
+					.b-card-payment
+						h1 Связь банк
+						form
+							.b-card-payment__details.b-card-payment__details--error
+								p Процедура проверки подлинности на сайте Вашего банка не выполнена. Пожалуйста, обратитесь в банк, выдавший Вам карты для уточнения условий обслуживания или подключения услуги Verified by VISA или Mastercard Secure Code. Телефон для связи с банком Вы можете найти на обороте Вашей карты.
+							.b-card-payment__amount.b-card-payment__amount--error.text-center
+								img.logo(src="/src/images/logo.svg", alt="Логотип Почты России", title="Логотип Почты России", width="100", height="50")
+								h2.error
+									i.icon-shopping_cart_delete
+									| Оплата не прошла
+								p.b-card-payment__amount__order-number Номер заказа: 1471
+								a.btn.btn__primary.btn--expand Оплатить другой картой
+								a.return(href="#") Вернуться на сайт
+						.b-payment-systems
+							ul.left
+								li: img(src="/src/images/visa.svg")
+								li: img(src="/src/images/visaelectron.svg")
+								li: img(src="/src/images/masterCard.svg")
+								li: img(src="/src/images/maestro.svg")
+							ul.right
+								li: img(src="/src/images/pci.png")
+								li: img(src="/src/images/vermedByVisa.svg")
+								li: img(src="/src/images/masterCardSecureCode.svg")
+		// /content

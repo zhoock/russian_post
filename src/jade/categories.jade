@@ -1,0 +1,55 @@
+//- categories.jade
+
+include ../includes/_mixins
+
+doctype html
+html(lang="ru")
+	- var title = "Почта России – Рубрикатор"
+	include ../includes/_head
+
+	body
+		img(src="/src/images/Subs_themes_8_1_MVP.jpg" alt="" style="left: 210px; opacity: 0.5; position: absolute; top: 0; z-index: 9999; display: none;")
+		include ../includes/_header
+
+		include ../includes/_search
+
+		// content
+		section.b-content(role="main")
+
+			// nav
+			nav.b-nav
+				.row
+					.small-5.small-centered.columns
+						ul
+							li: a.active(href="#") Подборки
+							li
+								a(href="#") По алфавиту
+								i.icon-Dropdown
+							li: a(href="#") По теме
+			// /nav
+
+			// categories
+			.row
+				.small-11.columns
+					section.b-categories
+						+categories("A", letterA)
+						+categories("Б", letterB)
+						+categories("Д", letterD)
+						+categories("З", letterZ)
+						+categories("И", letterI)
+						+categories("К", letterK)
+						+categories("Л", letterL)
+
+				.small-1.columns
+					.b-alphabet.js-section
+						a.active(href="#") A
+						each val in alphabet
+							a(href="#")= val
+			// /categories
+
+		// /content
+
+		// footer
+		include ../includes/_footer
+		// /footer
+

@@ -1,0 +1,93 @@
+// Aside
+//
+//
+.b-recommendation,
+.b-publishing-house {
+
+    a {
+        background-color: #007fff;
+        color: white !important;
+        text-align: center;
+        height: 606px;
+        overflow: hidden;
+        padding: 23px;
+        display: block;
+        .box-shadow (0 2px 2px #b3b3b3);
+
+        &:hover {
+            .box-shadow (0 3px 6px #b3b3b3);
+
+            .b-publishing-house__show {
+                span {
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+
+    &__recommended, &__heading {
+        font-size: 1.2rem;
+        line-height: 1.6rem;
+        margin-bottom: 5px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+
+        &--tt {
+            text-transform: uppercase;
+            margin-bottom: 28px;
+        }
+    }
+
+    img {
+        margin-bottom: 30px;
+
+        &.logo {
+            margin-bottom: 112px;
+        }
+    }
+
+    &__logs {
+        position: relative;
+        width: 440px;
+        left: -112px;
+
+        img {
+            float: left;
+            margin-right: 20px;
+        }
+    }
+
+    &__name {
+        font-size: 2.4rem;
+        margin-bottom: 55px;
+        font-weight: @medium;
+    }
+
+    &__tagline, &__title {
+        font-size: 1.8rem;
+    }
+
+    &__show {
+        position: absolute;
+        left: 24px;
+        bottom: 18px;
+
+        i {
+            font-size: 2.5rem !important;
+            margin-right: 12px;
+            position: relative;
+            top: 7px;
+            color: white !important;
+        }
+
+        span {
+            color: white;
+            font-size: 1.2rem;
+            line-height: 1.6rem;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+}

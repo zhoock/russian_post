@@ -1,0 +1,103 @@
+// Messages
+//
+//
+
+.b-message {
+    text-align: center;
+    width: 598px;
+    height: 260px;
+    margin: auto;
+    padding: 40px 110px;
+
+    &--region {
+        height: 270px;
+
+        .b-message__notice {
+            margin-top: 38px;
+        }
+    }
+
+    &--address {
+        padding: 40px 36px;
+        height: 219px;
+    }
+
+    i.icon-region_pop_close {
+        font-size: 1.6rem;
+        top: 20px;
+        right: 16px;
+        color: @link;
+    }
+
+    &__status {
+        margin-bottom: 40px;
+        font-size: 1.4rem;
+        line-height: 1.8rem;
+
+        i {
+            position: relative;
+            left: -9px;
+        }
+
+        &--success {
+            color: @success-color;
+        }
+
+        &--error {
+            color: @error-color;
+        }
+
+    }
+
+    &__notice {
+        font-size: 2.2rem;
+        line-height: 2.6rem;
+        color: black;
+    }
+
+    &__action {
+        font-size: 1.8rem;
+        position: absolute;
+        left: 50%;
+        bottom: 61px;
+        width: 100%;
+        .translate(-50%);
+    }
+
+    &__prompt {
+        margin: 15px 0 23px;
+
+        .btn__prompt {
+            color: @link;
+            text-decoration: none;
+            min-width: 72px;
+            height: 36px;
+            line-height: 8px;
+            border: 1px solid @link;
+
+            &:hover {
+                border-color: @link;
+                color: white;
+                background-color: @link;
+            }
+        }
+    }
+    
+    &__promise {
+        font-size: 1.4rem;
+        line-height: 1.8rem;
+        position: absolute;
+        left: 50%;
+        bottom: 55px;
+        width: 100%;
+        .translate(-50%);
+    }
+
+    &__address {
+        margin-top: 29px;
+
+        input {
+            margin-bottom: 0;
+        }
+    }
+}

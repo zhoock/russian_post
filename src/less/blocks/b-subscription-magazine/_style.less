@@ -1,0 +1,194 @@
+// Subscription magazine
+//
+//
+
+.b-subscription {
+    background: white;
+    position: relative;
+    margin-top: 194px;
+
+    &__heading {
+        .box-shadow(#A7A8A9 0 1px 6px);
+        height: 100px;
+
+        .b-nav {
+            box-shadow: none;
+
+            ul {
+                height: 100px;
+
+                li {
+                    display: inline-block;
+
+                    a {
+                        line-height: inherit;
+
+                        &.active {
+                            .b-subscription__type {
+                                color: @dark-text;
+                                font-weight: @bold;
+                            }
+
+                            &:hover {
+                                text-decoration: none;
+
+                                .b-subscription__type {
+                                    span {
+                                        text-decoration: none;
+                                    }
+                                }
+                            }
+                        }
+
+                        .b-subscription__type {
+                            margin-bottom: 9px;
+                            color: @link;
+                            font-weight: @regular;
+                        }
+
+                        &:hover {
+                            text-decoration: none;
+
+                            .b-subscription__type {
+                                span {
+                                    text-decoration: underline;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &--shadow {
+        .box-shadow(#A7A8A9 0 1px 6px);
+    }
+
+    &__photo {
+        margin-top: -160px;
+    }
+
+    &__type {
+        color: @dark-text;
+        font-weight: @bold;
+        margin-top: 14px;
+
+        i.icon-book,
+        i.icon-mobile {
+            color: @dark-text;
+            margin-right: 8px;
+            font-size: 1.4rem;
+            position: inherit;
+        }
+    }
+
+    h1 {
+        color: @dark-text;
+        margin: 10px 0;
+        font-size: 3rem;
+        margin-top: 2.66667rem;
+        margin-bottom: 1.33333rem;
+    }
+
+    &__description {
+        color: #414141;
+    }
+
+    &__info {
+        font-size: 1.4rem;
+        line-height: 2.2rem;
+        color: #4b4b4b;
+        margin-bottom: 5.33333rem;
+    }
+
+    &__min,
+    &__half-year,
+    &__year,
+    .discount {
+        font-size: 1.4rem;
+        line-height: 1.8rem;
+        color: #4b4b4b;
+    }
+
+    &__price {
+        font-size: 2.2rem;
+        line-height: 2.4rem;
+        color: #4b4b4b;
+        font-weight: @medium;
+        margin-top: .6rem;
+    }
+
+    .discount {
+        color: #20a217;
+    }
+
+    .b-card {
+        .box-shadow(#A7A8A9 0 1px 6px);
+        padding: 24px 26px;
+        margin: 4.2rem 0 5.6rem;
+        border: 1px solid transparent;
+
+        &--error {
+            border-color: @error-color;
+        }
+
+        &__form-elements {
+            border-right: 1px solid #d9d9d9;
+            padding-right: 15px;
+        }
+
+        &__half-year,
+        &__delivery {
+            font-size: 1.4rem;
+            line-height: 1.8rem;
+            color: #4b4b4b;
+            margin-bottom: 20px;
+        }
+
+        &__half-year {
+            margin: 20px 0 110px;
+        }
+
+        &__price {
+            font-weight: @medium;
+            color: #4b4b4b;
+            font-size: 1.6rem;
+            line-height: 2.4rem;
+        }
+
+        .btn {
+            font-size: 1.8rem;
+            font-weight: @medium;
+        }
+
+        input[type="checkbox"] + label {
+            font-size: 1.8rem;
+            margin-left: 0;
+        }
+
+        label {
+            font-size: 1.4rem;
+            color: #4b4b4b;
+            margin-left: 9px;
+        }
+
+        .hint {
+            color: #999;
+            font-size: 1.4rem;
+            position: relative;
+            left: 10px;
+        }
+
+        .error {
+            color: @error-color;
+        }
+    }
+}
+
+
+
+
+
+
+

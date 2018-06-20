@@ -1,0 +1,39 @@
+//- includes/_header.jade
+
+.row
+	.large-12.columns
+
+		// header
+		header(role="banner")
+
+			.row
+				.small-8.columns
+
+					// Logo
+					a.logo(href="/")
+						img(src="/src/images/logo.svg", alt="Логотип Почты России", title="Логотип Почты России")
+					// /Logo
+
+				.small-4.columns
+
+						// Account
+						.b-account
+							ul
+								li.question
+									i.icon-Help
+									a(href="#") Помощь
+
+								li.menu
+									span.counter 1
+									a(href="#") Иван Вотяков
+									i.icon-Dropdown
+
+									div.b-account__menu
+										ul
+											li: a(href="#") Москва
+											li: a(href="#") Мои подписки
+											li: a(href="#") Выйти
+
+							// /Account
+
+		// /header

@@ -1,0 +1,34 @@
+//- message3.jade
+
+include ../includes/_mixins
+
+doctype html
+html(lang="ru")
+	- var title = "Почта России – подписка в регионе"
+
+	include ../includes/_head
+
+	body
+		img(src="/src/images/Subs_region.png" alt="" style="left: 210px; opacity: 0.5; position: absolute; top: 0; z-index: 9999; display: none;")
+
+		// overlay
+		.b-modal-overlay.js-modal-overlay.open
+			.b-modal.b-modal-effect-1
+
+				// modal-content
+				section.b-modal-content.b-message.b-message--region
+					i.icon-region_pop_close.js-modal__close
+					.row.small-collapse
+						.small-12.columns
+							.b-message__notice Будете подписываться в Москве?
+							.b-message__prompt
+								a.btn.btn__prompt Да
+								a.btn.btn__prompt Нет
+					.b-message__promise Покажем цены доставки и издания
+						br
+						| этого населенного пункта
+				// /modal-content
+
+		// /overlay
+
+

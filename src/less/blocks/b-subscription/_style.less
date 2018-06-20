@@ -1,0 +1,317 @@
+// Subscription
+//
+//
+
+.b-subscription {
+    position: relative;
+    margin-top: 194px;
+
+
+    &__publication-set {
+        width: 230px;
+        background-color: white;
+
+    }
+
+    &__heading {
+        .box-shadow(#A7A8A9 0 1px 6px);
+        height: 100px;
+
+        &--set {
+            img {
+                display: inline-block;
+                max-width: 134px;
+                position: relative;
+                vertical-align: bottom;
+
+                &:nth-of-type(1) {
+                    z-index: 3;
+                }
+
+                &:nth-of-type(2) {
+                    margin-left: -26px;
+                    z-index: 2;
+                }
+
+                &:nth-of-type(3) {
+                    margin-left: -26px;
+                    z-index: 1;
+                }
+            }
+        }
+
+        .b-nav {
+            box-shadow: none;
+
+            ul {
+                height: 100px;
+
+                li {
+                    display: inline-block;
+
+                    a {
+                        line-height: inherit;
+
+                        &.active {
+                            .b-subscription__type {
+                                color: @dark-text;
+                                font-weight: @bold;
+                            }
+
+                            &:hover {
+                                text-decoration: none;
+
+                                .b-subscription__type {
+                                    span {
+                                        text-decoration: none;
+                                    }
+                                }
+                            }
+                        }
+
+                        .b-subscription__type {
+                            margin-bottom: 10px;
+                            color: @link;
+                            font-weight: @regular;
+                        }
+
+                        &:hover {
+                            text-decoration: none;
+
+                            .b-subscription__type {
+                                span {
+                                    text-decoration: underline;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &--shadow {
+        .box-shadow (0 2px 2px #b3b3b3);
+        background-color: white;
+    }
+
+    &__photo {
+        margin-top: -160px;
+    }
+
+    &__type {
+        color: @dark-text;
+        font-weight: @bold;
+        margin-top: 14px;
+
+        i.icon-book,
+        i.icon-mobile {
+            color: @dark-text;
+            margin-right: 8px;
+            font-size: 1.4rem;
+            position: inherit;
+        }
+    }
+
+    h1 {
+        color: @dark-text;
+        margin: 10px 0;
+        font-size: 3rem;
+        margin-top: 2.66667rem;
+        margin-bottom: 1.33333rem;
+    }
+
+    &__description {
+        color: #414141;
+    }
+
+    &__info {
+        font-size: 1.4rem;
+        line-height: 2.2rem;
+        color: #4b4b4b;
+        margin-bottom: 5.33333rem;
+    }
+
+    &__period {
+        float: left;
+        font-size: 1.4rem;
+        line-height: 1.8rem;
+        color: #4b4b4b;
+        margin-bottom: 42px;
+
+        &:not(:last-of-type) {
+            margin-right: 48px;
+        }
+    }
+
+    &__price {
+        font-size: 2.2rem;
+        line-height: 2.4rem;
+        color: #4b4b4b;
+        font-weight: @medium;
+        margin-top: .6rem;
+    }
+
+    .discount {
+        color: #20a217;
+    }
+
+    &__journal {
+        padding: 0 66px 0;
+        border-bottom: 1px solid #e5e5e5;
+
+        .b-subscription__description {
+            display: none;
+        }
+
+        .b-subscription__info {
+            margin-bottom: 3.2rem;
+        }
+
+        &--show {
+            i {
+                .transform(rotate(180deg))
+            }
+
+            .b-subscription__description {
+                display: block;
+            }
+        }
+
+        h1 {
+            font-size: 2.2rem;
+            line-height: 2.6rem;
+            color: @link;
+            cursor: pointer;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+
+        i {
+            position: absolute;
+            left: -30px;
+            font-size: 12px;
+            top: 7px;
+        }
+    }
+
+    &__periods {
+        padding: 50px 66px 0;
+        font-size: 1.4rem;
+        line-height: 1.8rem;
+        color: #4b4b4b;
+
+        &__item {
+            margin-bottom: 32px;
+        }
+
+        &__titles, &__quantity {
+            float: left;
+            width: 60%;
+        }
+
+        &__titles {
+            div {
+                position: relative;
+
+                span {
+                    background: white;
+                    position: relative;
+                }
+
+                &:before {
+                    content: "";
+                    position: absolute;
+                    background: url(/src/images/line_horz.gif) repeat-x;
+                    height: 1px;
+                    width: 100%;
+                    top: 14px;
+                }
+
+            }
+        }
+
+        &__price {
+            font-size: 2.2rem;
+            color: #4b4b4b;
+            font-weight: @medium;
+            margin-top: 16px;
+        }
+    }
+
+    .b-card {
+        padding: 24px 26px 40px;
+        position: relative;
+        border: 1px solid transparent;
+        border-top-color: #f6f6f7;
+
+        .btn {
+            font-size: 1.8rem;
+            font-weight: @medium;
+            line-height: 24px;
+            padding-left: 70px;
+            text-align: left;
+
+            &--no-icon {
+                padding-left: 50px;
+            }
+
+            i {
+                top: 12px;
+                left: 37px;
+            }
+
+            &.disabled {
+                .price {
+                    border-left-color: #d8d9d9;
+                }
+            }
+
+            .price {
+                border-left: 1px solid #1a6db8;
+                text-align: right;
+                position: absolute;
+                right: 18px;
+                line-height: 50px;
+                height: 50px;
+                top: 0;
+                padding-left: 20px;
+            }
+        }
+
+        input[type="checkbox"] + label {
+            font-size: 1.8rem;
+            margin-left: 0;
+        }
+
+        label {
+            font-size: 1.4rem;
+            color: #4b4b4b;
+            margin-left: 9px;
+        }
+
+        .hint {
+            font-size: 1.4rem;
+            margin-left: 9px;
+        }
+
+        .error {
+            color: @error-color;
+        }
+
+        + .b-recently-viewed {
+            padding-top: 3.6rem;
+            background-color: #f3f3f3;
+            padding-bottom: 9rem;
+        }
+    }
+}
+
+
+
+
+
+
+

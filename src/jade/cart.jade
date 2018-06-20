@@ -1,0 +1,68 @@
+//-  cart.jade
+
+include ../includes/_mixins
+
+doctype html
+html(lang="ru")
+	- var title = "Почта России – корзина"
+
+	include ../includes/_head
+
+	body
+		include ../includes/_header
+
+		// content
+		section.b-content(role="main")
+
+			// nav
+			nav.b-nav.b-nav--cart
+				.row
+					.small-12.columns
+						ul
+							li
+								i.icon-back
+								a(href="#") Продолжить покупки
+
+			// /nav
+
+			.row
+				.small-12.columns
+					section.b-results.b-cart
+						h2 Корзина
+						article.b-cart__item
+							- var periodСlosed = true
+							+cartItem("Журнал", "Семь дней", "2015: Июнь Июль  Авг  Сен  Окт  Ноя", 'Россия, Рязань, улица Павлова, 31', "Вотякову Ивану Александровичу", '', "Подписка на этот период закрыта").b-block-magazine__period-closed
+						article.b-cart__item
+							- var periodСlosed = false
+							- var setImg = true
+							+cartItem("Комплект", "Финансовый директор + Практическое налоговое планирование + Кадровое дело", "2015: Июнь Июль  Авг  Сен  Окт  Ноя", 'Россия, Рязань, улица Павлова, 31', "Вотякову Ивану Александровичу", "+ Добавить еще экземпляр", '')
+						article.b-cart__item
+							- var restoreSubscription = "active"
+							+cartItem("Комплект", "Финансовый директор + Практическое налоговое планирование + Кадровое дело", "2015: Июнь Июль  Авг  Сен  Окт  Ноя", 'Россия, Рязань, улица Павлова, 31', "Вотякову Ивану Александровичу", "+ Добавить еще экземпляр", '')
+
+						// payment
+						.b-payment.b-payment__popup
+							.row
+								.b-payment__wrapper
+
+									.small-3.columns
+										.btn.btn__primary Оплатить
+									.small-5.columns
+										p.or.left или
+										p.left
+											a.b-payment__download(href="#") Cкачать бланк оплаты
+											br
+											| Оплатить можно в любом
+											br
+											| отделении почты
+
+									.small-4.columns
+										p.b-payment__price.text-right 1 издание на 1670 &#8381;
+						// /payment
+
+
+		// /content
+
+		// footer
+		include ../includes/_footer
+		// /footer

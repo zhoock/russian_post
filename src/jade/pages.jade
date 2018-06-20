@@ -1,0 +1,40 @@
+//- pages.jade
+mixin link(href, name)
+	div
+		| #{name} -
+		=" "
+		a(href=href + ".html", target="_blank") #{href + ".html"}
+
+
+doctype html
+html(lang="ru")
+	- var title = "Почта России - адрес"
+
+	body
+		+link("subscription","Подписка на газеты и журналы")
+		+link("publication-popup","Издание попап")
+		+link("page-publication","Страница издания")
+		+link("categories","Рубрикатор")
+		+link("alphabetical-search","Поиск по алфавиту")
+		+link("publishing-house","Издательство")
+		+link("theme","Тема")
+		+link("cart","Корзина")
+		+link("payment","Оплата1")
+		+link("payment2","Оплата2")
+		+link("payment3","Оплата3")
+		+link("payment4","Оплата4")
+		+link("publishing-house-no-cover","Издательство без обложки")
+		+link("my-subscriptions","Мои подписки")
+		+link("my-subscriptions-none","Мои подписки")
+		+link("set-popup","Комплекты попап")
+		+link("publication-set-popup","Издание комплекты попап")
+		+link("page-publication-set","Страница издания комплекты")
+		+link("page-set","Страница комплекты")
+		+link("search-results","Результаты поиска")
+		+link("message1","Подписка оформлена")
+		+link("message2","Оплата отклонена")
+		+link("message3","Подписка в регионе")
+		+link("message4","Адрес")
+		+link("Subs_item_popup_PO_Box","Subs_item_popup_PO_Box")
+		+link("Subs_item_popup_notify","Subs_item_popup_notify")
+		+link("Subs_cart_popup","Subs_cart_popup")

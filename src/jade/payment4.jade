@@ -1,0 +1,106 @@
+//-  payments.jade
+
+include ../includes/_mixins
+
+doctype html
+html(lang="ru")
+	- var title = "Почта России – оплата4"
+
+	include ../includes/_head
+
+	body
+
+		// content
+		section.b-content(role="main")
+
+			.row
+				.small-12.columns
+					.b-card-payment
+						h1 Связь банк
+
+						form
+							.b-card-payment__details
+
+								.row
+									.small-12.columns
+										label Номер карты
+								.row
+									.small-12.columns
+										.b-card-payment__details__number
+											input(type="text")
+											input(type="text")
+											input(type="text")
+											input(type="text")
+
+								.row
+									.small-12.columns
+										label Срок действия
+
+								.row
+									.small-12.columns
+										.b-card-payment__details__validity
+											.b-custom-select
+												.b-custom-select__value Месяц
+												input(readonly="readonly", value="Месяц", type="text")
+												i.icon-Dropdown2
+												.b-custom-select__suggest-wrapper
+													.b-custom-select__suggest
+														.b-custom-select__suggest__element.b-custom-select__suggest__element--selected Янв
+														.b-custom-select__suggest__element Фев
+														.b-custom-select__suggest__element Мар
+														.b-custom-select__suggest__element Апр
+
+											.b-custom-select.b-custom-select--year
+												.b-custom-select__value Год
+												input(readonly="readonly", value="Год", type="text")
+												i.icon-Dropdown2
+												.b-custom-select__suggest-wrapper
+													.b-custom-select__suggest
+														.b-custom-select__suggest__element.b-custom-select__suggest__element--selected 2015
+														.b-custom-select__suggest__element 2016
+														.b-custom-select__suggest__element 2017
+														.b-custom-select__suggest__element 2018
+
+											.b-label-ccv
+												label CCV/CVC
+												i.icon-Help
+
+												.b-label-ccv__dropdown
+													.text-center
+														img(src="/src/images/card.png")
+													p На обороте карты три последние цифры на полосе с&nbsp;подписью
+
+											.b-input-ccv
+												input(type="text")
+
+								.row
+									.small-12.columns
+										label Имя на карте
+								.row
+									.small-12.columns
+										.b-card-payment__details__name
+											input(type="text")
+
+							.b-card-payment__amount.text-center
+								img.logo(src="/src/images/logo.svg", alt="Логотип Почты России", title="Логотип Почты России", width="100", height="50")
+
+								h2 Вы оплачиваете подписку
+									br
+									| на cумму 647 рублей
+
+								p.b-card-payment__amount__order-number Номер заказа: 1471
+
+								a.btn.btn--expand.disabled Оплатить
+
+						.b-payment-systems
+							ul.left
+								li: img(src="/src/images/visa.svg")
+								li: img(src="/src/images/visaelectron.svg")
+								li: img(src="/src/images/masterCard.svg")
+								li: img(src="/src/images/maestro.svg")
+
+							ul.right
+								li: img(src="/src/images/pci.png")
+								li: img(src="/src/images/vermedByVisa.svg")
+								li: img(src="/src/images/masterCardSecureCode.svg")
+		// /content

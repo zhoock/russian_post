@@ -1,0 +1,48 @@
+// Banner publisher
+//
+//
+
+.b-banner-publisher {
+    color: white;
+    height: 240px;
+    margin-bottom: 2rem;
+
+    &--cover-no {
+        background: transparent url(/src/images/no-cover.svg) no-repeat 87% 37px;
+    }
+
+    &--color {
+        background-color: #e33b39;
+    }
+
+    img {
+        position: absolute;
+        width: 1020px;
+        left: 50%;
+        margin-left: -510px;
+    }
+
+    &__overlay {
+        position: absolute;
+        left: 0;
+        width: 100%;
+        height: 240px;
+        opacity: .7;
+
+        &--color {
+            background-color: #e33b39;
+        }
+    }
+
+    h1 {
+        font-size: 3rem;
+        color: white;
+        margin: 4rem 0 1.8rem;
+    }
+
+    p {
+        font-size: 1.4rem;
+        line-height: 1.8rem;
+    }
+}
+

@@ -1,0 +1,35 @@
+//- search.jade
+
+// search
+section.b-search.text-center
+	h1 Газеты и журналы по подписке
+	.b-search__wrapper
+		input(type="text", placeholder="Поиск по индексу, названию, теме или издателю")
+		.b-search__dropdown.text-left
+			.row
+				.small-3.columns
+					.b-search__dropdown__magazines Журналы
+				.small-7.columns
+					.b-search__dropdown__title Вокруг света
+					.b-search__dropdown__title Вокруг света Gold
+				.small-2.columns
+					.b-search__dropdown__cover
+						img(src="/src/images/photo-magazine1.jpg")
+					.b-search__dropdown__cover
+						img(src="/src/images/photo-magazine1.jpg")
+
+			+dropdown("Газета", "Ведомости")
+			+dropdown("Комплект", "Вокруг света + Gold")
+			+dropdown("Издательство", "Вокруг света")
+			+dropdown("Тема", "Военное дело. Силовые структуры")
+			.row.small-collapse
+				.small-12.columns
+					.text-center
+						a.show-all(href="#") Показать все
+	.tags
+		a(href="#") Детские журналы
+		a(href="#") Вокруг света
+		a(href="#") Бизнес и&nbsp;маркетинг
+		a(href="#") Бухгалтерам
+// /search
+

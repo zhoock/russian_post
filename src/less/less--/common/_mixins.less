@@ -1,0 +1,49 @@
+// Buttons
+//
+//
+
+.linear-gradient(@from: #000, @to: #fff) {
+    background-color: @from;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(@from), to(@to));
+    background-image: -webkit-linear-gradient(top, @from, @to);
+    background-image: -moz-linear-gradient(top, @from, @to);
+    background-image: -o-linear-gradient(top, @from, @to);
+    background-image: linear-gradient(to bottom, @from, @to);
+}
+
+.transition (@transition) {
+    -webkit-transition: @transition;
+    -moz-transition: @transition;
+    -ms-transition: @transition;
+    -o-transition: @transition;
+}
+
+.transform(@string) {
+    -webkit-transform: @string;
+    -moz-transform: @string;
+    -ms-transform: @string;
+    -o-transform: @string;
+}
+
+.translate (@x, @y:0) {
+    -webkit-transform: translate(@x, @y);
+    -moz-transform: translate(@x, @y);
+    -ms-transform: translate(@x, @y);
+    -o-transform: translate(@x, @y);
+}
+
+.box-sizing (@type: border-box) {
+    -webkit-box-sizing: @type;
+    -moz-box-sizing: @type;
+    box-sizing: @type;
+}
+
+.box-shadow (@string) {
+    -webkit-box-shadow: @string;
+    -moz-box-shadow: @string;
+    box-shadow: @string;
+}
+
+
+
+

@@ -1,0 +1,30 @@
+@import 'vendor/jquery-1.10.2.min.js'
+@import 'vendor/modernizr.js'
+
+
+$(function () {
+
+    // modal
+    $(".js-trigger-modal").on("click", function () {
+
+        $(".b-modal-overlay").toggleClass("open");
+        $(".js-modal__close, .js-modal-overlay").removeClass("hidden");
+        $("body").toggleClass("without-scrolling");
+
+        return false;
+    });
+
+    $(".js-modal__close, .js-modal-overlay").on("click", function(){
+        $(".js-modal-overlay").removeClass("open");
+        $("body").removeClass("without-scrolling");
+        $(".js-modal__close, .js-modal-overlay").toggleClass("hidden");
+
+        return false;
+    });
+
+    $(".b-modal").on("click", function(e){
+        e.stopPropagation();
+    });
+
+
+});

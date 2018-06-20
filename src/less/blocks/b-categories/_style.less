@@ -1,0 +1,65 @@
+// Categories
+//
+//
+
+.b-categories {
+    margin-top: 56px;
+    font-size: 2.2rem;
+    line-height: 4.5rem;
+
+    &__item {
+        margin-bottom: 45px;
+
+        &__letter {
+            float: left;
+            color: @lighter-text;
+
+        }
+
+        &__set {
+            margin-left: 40px;
+
+            a {
+                display: block;
+            }
+        }
+    }
+}
+
+
+.b-alphabet {
+    .box-shadow(0 1px 2px 0 #AEB0B2);
+    margin-top: 58px;
+    background: white;
+    text-align: center;
+    padding: 15px 0 28px;
+    margin-bottom: 100px;
+
+    &.stuck {
+        position: fixed;
+        top: 0;
+        margin-top: 0;
+        width: 59.9844px;
+    }
+    a {
+        display: block;
+        font-size: 1.4rem;
+        color: @lighter-text !important;
+        position: relative;
+
+        &.active {
+            color: @link !important;
+
+            &::before {
+                content: "";
+                position: absolute;
+                left: 18px;
+                top: 5px;
+                width: 2px;
+                height: 14px;
+                background-color: @link;
+            }
+
+        }
+    }
+}

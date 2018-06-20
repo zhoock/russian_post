@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_1" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns"
+	 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="112px" height="150px"
+	 viewBox="0 0 112 150" enable-background="new 0 0 112 150" xml:space="preserve">
+<title>Group Copy 2</title>
+<desc>Created with Sketch.</desc>
+<g id="Page-1" sketch:type="MSPage">
+	<g id="icons-copy-2" transform="translate(-464.000000, -71.000000)" sketch:type="MSArtboardGroup">
+		<g id="Group-Copy-2" transform="translate(464.000000, 71.000000)" sketch:type="MSLayerGroup">
+			<g sketch:type="MSShapeGroup">
+				<rect id="Rectangle-78" fill="#EAEAEA" stroke="#979797" stroke-width="0.1" width="112" height="150"/>
+				<rect id="Rectangle-78-Copy" fill="#FFFFFF" stroke="#979797" stroke-width="0.1" width="112" height="147"/>
+				<g id="Group-Copy-4" transform="translate(0.000000, 53.000000)">
+					<path id="Fill-69-Copy-153" fill="#D7D7D7" d="M0,9h112v85H0V9z"/>
+					<path id="Fill-69-Copy-154" fill="#FFFFFF" d="M7,27h31v2H7V27z"/>
+					<path id="Fill-69-Copy-156" fill="#FFFFFF" d="M7,32h31v2H7V32z"/>
+					<path id="Fill-69-Copy-158" fill="#FFFFFF" d="M7,37h31v2H7V37z"/>
+					<path id="Fill-69-Copy-203" fill="#FFFFFF" d="M17,76h22v2H17V76z"/>
+					<path id="Fill-14-Copy" fill="#F2F2F2" d="M11.003,84C9.002,84,7,82.207,7,79.997c0-2.213,1.793-4.003,4.003-4.003
+						c2.209,0,4.001,1.79,4.001,4.003C15.004,82.207,13.004,84,11.003,84z"/>
+					<path id="Fill-14-Copy-2" fill="#F2F2F2" d="M81,36c-8.999,0-18-8.062-18-18c0-9.951,8.062-18,18-18
+						c9.934,0,17.991,8.049,17.991,18C98.991,27.938,89.999,36,81,36z"/>
+					<path id="Fill-69-Copy-207" fill="#FFFFFF" d="M17,81h22v2H17V81z"/>
+				</g>
+				<rect id="Rectangle-77-Copy" x="7" y="70" fill="#FFFFFF" width="41" height="6"/>
+			</g>
+		</g>
+	</g>
+</g>
+</svg>

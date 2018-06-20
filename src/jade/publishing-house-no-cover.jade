@@ -1,0 +1,77 @@
+//- publishing-house-no-cover.jade
+
+include ../includes/_mixins
+
+doctype html
+html(lang="ru")
+	- var title = "Почта России – издательство без обложки"
+
+	include ../includes/_head
+
+	body
+		include ../includes/_header
+
+		// content
+		section.b-content(role="main")
+
+			include ../includes/_nav
+
+			// banner-publisher
+			.b-banner-publisher.b-banner-publisher--cover-no.b-banner-publisher--color
+				.b-banner-publisher__overlay.b-banner-publisher__overlay--color
+
+				.row
+					.small-7.columns
+						h1 Издательство Аргументы и факты
+				.row
+					.small-6.columns
+						p Все эти годы газета динамично развивается, вместе со всем отечественным медиарынком осваивает новые, современные направления деятельности, публикует глубокие, интересные, полемичные статьи и отличается собственным неповторимым стилем, открытостью, умением вести диалог с читателем.
+						p corp.aif.ru
+			// /banner-publisher
+
+			.row
+				.small-12.columns
+					.row
+						.small-3.columns
+							+block-magazine
+						.small-3.columns
+							+block-magazine
+						.small-3.columns
+							+block-magazine
+						.small-3.columns
+							+block-magazine
+					.row
+						.small-3.columns
+							+block-magazine
+						.small-3.columns
+							+block-magazine
+						.small-3.columns
+							+block-magazine
+						.small-3.columns
+							+block-magazine
+
+			// recently viewed
+			section.b-recently-viewed
+				.row
+					.small-12.columns
+						h2 Вы недавно смотрели
+				.row
+					.small-2.columns
+						+block-recently-viewed
+					.small-2.columns
+						+block-recently-viewed
+					.small-2.columns
+						+block-recently-viewed
+					.small-2.columns
+						+block-recently-viewed
+					.small-2.columns
+						+block-recently-viewed
+					.small-2.columns
+						+block-recently-viewed
+			// /recently viewed
+
+		// /content
+
+		// footer
+		include ../includes/_footer
+		// /footer
